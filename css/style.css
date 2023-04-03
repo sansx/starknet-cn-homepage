@@ -35,15 +35,16 @@ a:hover {color:#facc16;}
 .fbg-bbg{height:1080px;background:#f4f5f9 url(../images/bg3.jpg) no-repeat center 0;background-size:auto 100%;position:relative;}
 .fbg-btit{padding-top:100px;text-align:center;font-size:30px;color:#9fa9b5;}
 .fbg-b{width:95%;max-width:1000px;margin:70px auto 0;font-size:70px;color:#000;text-align:center;line-height:100px;}
-.fbg-cbg{height:1080px;background:#fff;position:relative;}
-.fbg-c{width:95%;max-width:1000px;margin:0 auto;padding-top:100px;}
+.fbg-cbg{min-height:1080px;background:#fff;position:relative;}
+.fbg-c{width:95%;margin:0 auto;padding-top:100px;}
 .fbg-cm{border:3px solid #e4e5e9;}
 .fbg-c ul{padding:20px 12px;}
-.fbg-c ul li{width:8.33%;height:80px;float:left;display:flex;align-items:center;justify-content:center;text-align:center;}
-.fbg-c ul li a{display:block;width:85%;height:90%;border:1px solid #ddd;position:relative;}
+.fbg-c ul li{width:33%;height:400px;float:left;display:flex;align-items:center;justify-content:center;text-align:center;}
+/* .fbg-c ul li a{display:block;width:85%;height:90%;border:1px solid #ddd;position:relative;} */
+.fbg-c ul li button{display:block;width:85%;height:90%;border:1px solid #ddd;position:relative;}
 .fbg-c ul li img{width:100%;height:100%;}
-.fbg-c ul li tt{display:block;width:100%;height:100%;background:#000;opacity:0;transition:.3s;position:absolute;left:0;top:0;z-index:99;}
-.fbg-c ul li:hover tt{opacity:.5;}
+.fbg-c ul li span{ display: flex; align-items: center; justify-content: center; color: #fff;display:block;width:100%;height:100%;background:#000;opacity:0;transition:.3s;position:absolute;left:0;top:0;z-index:99;}
+.fbg-c ul li:hover span{opacity:.7;}
 .fbg-cbg .fbg-but{bottom:8%;}
 .fbg-dbg{height:520px;background:url(../images/bg2.jpg) no-repeat center 0;background-size:auto 100%;}
 .fbg-d{width:95%;max-width:1000px;margin:0 auto;padding-top:250px;text-align:center;}
@@ -124,4 +125,137 @@ a:hover {color:#facc16;}
 }
 @media (max-width:400px) {
 .fbg-c ul li{width:20%;height:60px;}
+}
+
+
+.card {
+  /* flex布局下元素不按比例缩放 */
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  overflow: hidden;
+  /* margin: 20px; */
+  background-color: var(--border-color);
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* flex 子元素 纵向排列 */
+  flex-direction: column;
+  /* 增加个阴影 */
+  
+  /* 同意给字体价格颜色 */
+  color: var(--font_color);
+  transition: .3s all;
+}
+
+.card:hover{
+  box-shadow: 0 0 30px #2c2c2c;
+}
+
+.photo {
+  position: absolute;
+  /* 默认为放大 */
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  border-radius: 0%;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.photo::before {
+  /* 通过before增加渐变背景实现遮罩，让文字默认看起来清晰一些 */
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #333, transparent);
+}
+.card:hover .photo::before{
+  /* 缩小时隐藏 */
+  display: none;
+}
+
+.photo img {
+  /* 图片高宽均为100% */
+  /* 然后按照cover缩放，裁切长边 */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover .photo {
+  /* 鼠标移上变小 */
+  width: 120px;
+  height: 120px;
+  top: 30px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #111;
+}
+
+.card h1 {
+  position: absolute;
+  top: 380px;
+  transition: 0.5s;
+}
+
+.card:hover h1 {
+  position: absolute;
+  top: 170px;
+}
+
+.card>h2 {
+  /* margin-top: 220px;
+  width: 80%;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--h2_border_color); */
+}
+
+.card p {
+  width: 90%;
+  /* 段落缩进2个字符大小 */
+  text-indent: 2em;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 30px;
+  height: 180px;
+  overflow: auto;
+  margin-top: 200px;
+}
+
+.card a {
+  color: var(--font_color);
+  text-decoration: none;
+  padding: 12px 36px;
+  border: 1px solid var(--a_border_color);
+  border-radius: 8px;
+}
+
+.card a:hover {
+  color: #Fff;
+  background-color: var(--a_hover_background_color);
+}
+
+:root {
+  --background-color: #2c3e50;
+  --border-color: #7591AD;
+  --text-color: #34495e;
+  --color1: #EC3E27;
+  --color2: #fd79a8;
+  --color3: #0984e3;
+  --color4: #00b894;
+  --color5: #fdcb6e;
+  --color6: #e056fd;
+  --color7: #F97F51;
+  --color8: #BDC581;
+  --a_border_color: #86a3b3;
+  --h2_border_color: #8ea2b8;
+  --a_hover_background_color: #86a3b3;
+  --font_color: #e8f6fd;
 }
