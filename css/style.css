@@ -149,6 +149,7 @@ a:hover {color:#facc16;}
   /* 同意给字体价格颜色 */
   color: var(--font_color);
   transition: .3s all;
+  cursor: pointer;
 }
 
 .card:hover{
