@@ -88,7 +88,7 @@ a:hover {
 .header a.on {
   color: #000;
 }
-.header a.logo {
+.header .logo {
   position: absolute;
   left: 50%;
   top: 20px;
@@ -96,12 +96,14 @@ a:hover {
   /* margin-left: -95px; */
   line-height: 20px;
 }
-.header a.logo img {
+.header .logo img {
   height: 48px;
+  width: 48px;
+  object-fit: contain;
   opacity: 1;
   transition: 0.3s;
 }
-.header a.logo:hover img {
+.header .logo:hover img {
   opacity: 0.5;
 }
 .fbg-abg {
@@ -141,6 +143,12 @@ a:hover {
   margin: 70px auto 0;
   text-align: center;
 }
+.fbg-bbg .fbg-a {
+  padding: 0px 0 80px;
+}
+.fbg-bbg .fbg-but {
+  bottom: 2%;
+}
 .fbg-a h2 {
   font-size: 36px;
   font-weight: 300;
@@ -172,7 +180,7 @@ a:hover {
   cursor: pointer;
 }
 .fbg-bbg {
-  height: 1080px;
+  /* height: 1080px; */
   background: #f4f5f9 url(../images/bg3.jpg) no-repeat center 0;
   background-size: auto 100%;
   position: relative;
