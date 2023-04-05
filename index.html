@@ -135,10 +135,11 @@
         justify-content: center;
       }
       ul {
-        display: flex;
-        overflow: auto;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+        justify-content: center;
+        gap: 30px;
+        /* justify-content: space-evenly; */
       }
       .fbg-c {
         max-width: unset;
@@ -167,13 +168,12 @@
           <span><em>starknet.site</em><tt></tt></span>
         </div>
         <div class="fbg-a">
-          <h2>
-            A digital asset management firm in blockchain-based capital markets.
-          </h2>
+          <!-- <h2>
+            
+          </h2> -->
           <p>
-            Founded in 2015, FBG is one of the largest and earliest blockchain
-            investment firms, focused on early stage companies that accelerate
-            disruptive innovations.
+            A non-profit organization based on starknet and the cario <br/>
+            dedicated to making the cario and starknet popular
           </p>
         </div>
         <div class="fbg-but" data-id="1"><span></span></div>
@@ -226,11 +226,17 @@
     <script>
       $(document).ready(function () {
         const arr = [
+          `lbq, starknet.site sponsor
+          a simple man in blcokchain and history，maybe i don‘t like “web3” that newly word，When I first came then only the cryptocurrency industry or blockchain industry, and the mining industry will be more focused and segmented, now a web3 to all these so-called are included, this is not a very good phenomenon, people become very anxious, it is difficult to deep a field ，much more better call me a realman a passion stuio for my love
+          Dreams are meditation in the industry 🧘, yoga in meditation.More than 7years in our beauty feilds.
+
+          Recent interest in the “Dao” ，NFT ， tradfi ，podcast ，yoga， and layer2`,
           `Ben, has rich experience in developing distributed computing and storage systems and has worked for internet companies such as Xiaomi and iQiyi. He currently serves as the tech lead for the Layer2 infrastructure team at Reddio (backed by Paradigm) and collaborates with the Starkware team to improve Starknet components.`,
           `Hakeen, once a researcher for W3.Hitchhiker, is now in First class First.vip. Mainly engaged in developing and researching infrastructure. We hope to use the power of science and technology to bring finance to every corner of the world.`,
           `With, a strong focus on user-oriented artistic product design and development. Before setting foot in the blockchain industry, he had ample experiences working in the tech field focusing on AR and VR. Founder of NUO2069`,
+          `chris lin, Leading the infra ( Briding & Coordinator & SC & Devops ) China team in scorll`,
           `King, an early investor in the crypto world~mainly engaged in research and tracking of crypto infrastructure and applications~We hope to use crypto technology to bring fairness and justice to world finance~Strive for the happiness of future generations~`,
-          // `Ben has rich experience in developing distributed computing and storage systems and has worked for internet companies such as Xiaomi and iQiyi. He currently serves as the tech lead for the Layer2 infrastructure team at Reddio (backed by Paradigm) and collaborates with the Starkware team to improve Starknet components.`,
+          `Xyyme.eth, with 3 years of expertise in smart contract development, developed DeFi protocols with TVL exceeding hundreds of millions of dollars. Exploring Starknet and Cairo technologies recently, including developed an ERC721 contract using Cairo 1.0, which was recommended by StartWare. Currently working at Reddio (backed by Paradigm).`,
         ];
         let str = arr
           .map((el, idx) => {
@@ -242,7 +248,7 @@
             console.log(el.split(","));
 
             return ` <div class="card"><div class="photo">
-            <img src="images/avartars/${idx}.jpeg">
+            <img src="images/avartars/${el.split(",")[0]}.jpeg">
         </div>
         <h1>${el.split(",")[0]}</h1>
         <h2></h2>
@@ -250,7 +256,8 @@
         <a href="#">know more</a></div>`;
           })
           .join("");
-        $("ul").html(str + `<div class="clear"></div>`);
+        $("ul").html(str);
+        // + `<div class="clear"></div>`
       });
     </script>
   </body>
