@@ -104,25 +104,43 @@
         touch-action: manipulation;
         white-space: nowrap;
         cursor: pointer;
+        align-items: center;
       }
 
       .button-64:active,
       .button-64:hover {
         outline: 0;
+        box-shadow: 0px 0px 6px #000;
       }
 
-      .button-64 span {
+      .button-64 > span {
         background-color: rgb(5, 6, 45);
         padding: 16px 24px;
         border-radius: 6px;
         width: 100%;
         height: 100%;
         transition: 300ms;
+        display: flex;
+        align-items: center;
+      }
+
+      .button-64 .btnIcon {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        margin-right: 20px;
+        background: white;
+        padding: 2px;
+        border-radius: 50%;
       }
 
       .button-64:hover span {
         background: none;
       }
+
+      /* .iconBtn:hover img {
+        border: 1px solid #000;
+      } */
 
       @media (min-width: 768px) {
         .button-64 {
@@ -144,6 +162,14 @@
       .fbg-c {
         max-width: unset;
       }
+      .fbg-d {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
+      .iconBtn span {
+        min-width: 370px;
+      }
     </style>
   </head>
 
@@ -151,7 +177,7 @@
     <div class="headerbg">
       <div class="header">
         <a class="logo" href="https://www.fbg.capital/#"
-          ><img src="images//logo.jpg"
+          ><img src="images/logo.png"
         /></a>
         <div class="nav">
           <a class="on">ABOUT</a>
@@ -172,7 +198,7 @@
             
           </h2> -->
           <p>
-            A non-profit organization based on starknet and the cario <br/>
+            A non-profit organization based on starknet and the cario <br />
             dedicated to making the cario and starknet popular
           </p>
         </div>
@@ -208,13 +234,33 @@
 
     <div class="fbg-dbg t4">
       <div class="fbg-d">
-        <a href="mailto:media@fbg.capital"><span>media@fbg.capital</span></a>
+        <a href="https://forum.starknet.site/" target="_blank">
+          <button class="button-64 iconBtn" role="button">
+            <span class="text"
+              ><img
+                class="btnIcon"
+                src="images/Email-Icon.png"
+              />ilove@starknet.site</span
+            >
+          </button></a
+        >
+        <a href="https://twitter.com/starknetsite" target="_blank">
+          <button class="button-64 iconBtn" role="button">
+            <span class="text"
+              ><img
+                class="btnIcon"
+                src="images/twitter-icon.png"
+              />starknetsite</span
+            >
+          </button></a
+        >
+        <!-- <a href="mailto:media@fbg.capital"><span>media@fbg.capital</span></a> -->
       </div>
     </div>
 
     <div class="fbg-ebg">
       <div class="fbg-e">
-        <span><img src="images//logo2.jpg" /></span>Copyright C 2022-2023
+        <span><img src="images/logo.png" /></span>Copyright C 2022-2023
         <!-- FBG
         Offcial Website. All Rights Reserved -->
       </div>
@@ -233,10 +279,12 @@
           Recent interest in the “Dao” ，NFT ， tradfi ，podcast ，yoga， and layer2`,
           `Ben, has rich experience in developing distributed computing and storage systems and has worked for internet companies such as Xiaomi and iQiyi. He currently serves as the tech lead for the Layer2 infrastructure team at Reddio (backed by Paradigm) and collaborates with the Starkware team to improve Starknet components.`,
           `Hakeen, once a researcher for W3.Hitchhiker, is now in First class First.vip. Mainly engaged in developing and researching infrastructure. We hope to use the power of science and technology to bring finance to every corner of the world.`,
-          `With, a strong focus on user-oriented artistic product design and development. Before setting foot in the blockchain industry, he had ample experiences working in the tech field focusing on AR and VR. Founder of NUO2069`,
+          `0xace.eth, a strong focus on user-oriented artistic product design and development. Before setting foot in the blockchain industry, he had ample experiences working in the tech field focusing on AR and VR. Founder of NUO2069`,
           `chris lin, Leading the infra ( Briding & Coordinator & SC & Devops ) China team in scorll`,
           `King, an early investor in the crypto world~mainly engaged in research and tracking of crypto infrastructure and applications~We hope to use crypto technology to bring fairness and justice to world finance~Strive for the happiness of future generations~`,
           `Xyyme.eth, with 3 years of expertise in smart contract development, developed DeFi protocols with TVL exceeding hundreds of millions of dollars. Exploring Starknet and Cairo technologies recently, including developed an ERC721 contract using Cairo 1.0, which was recommended by StartWare. Currently working at Reddio (backed by Paradigm).`,
+          `o, Hodler is one of the lucky ones who got involved in the crypto world early on. He is full of curiosity for innovative and interesting things and is also enthusiastic about contributing his own modest efforts to the world of crypto.`,
+          "sansx, 🐶 🐕 🐩 🦮 🐕‍🦺 🦴 🌭 𓃡 𓃢 𓃥 𓃩 𓃦 𓃫 (^・(I)・^) (❍ᴥ❍ʋ) U ´ᴥ` U U・ᴥ・U U・ﻌ・U V●ᴥ●V ฅ^•ﻌ•^ฅ ▼(´ᴥ`)▼ ｖ・。・Ｖ ▼・ᴥ・▼`",
         ];
         let str = arr
           .map((el, idx) => {
