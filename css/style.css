@@ -48,7 +48,8 @@ a:hover {
 
 .headerbg {
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
+  background: #161616;
   position: fixed;
   left: 0;
   top: 0;
@@ -86,7 +87,8 @@ a:hover {
   right: 0;
 }
 .header a.on {
-  color: #000;
+  /* color: #000; */
+  color: #fff;
 }
 .header .logo {
   position: absolute;
@@ -276,7 +278,8 @@ a:hover {
   color: #fff;
 }
 .fbg-ebg {
-  background: #000;
+  /* background: #000; */
+  background: #161616;
   padding: 50px 0;
   text-align: center;
   font-size: 16px;
@@ -291,12 +294,14 @@ a:hover {
 .fbg-e span {
   position: absolute;
   left: 0;
-  top: -30px;
+  /* top: -30px; */
+  top: -40px;
 }
 
 .fbg-e img {
-  width: 80px;
-  height: 80px;
+  /* width: 80px; */
+  width: auto;
+  height: 100px;
 }
 
 .card {
