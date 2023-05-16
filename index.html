@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.scss" />
     <style>
       @-webkit-keyframes spin {
         0% {
@@ -268,7 +268,7 @@
     <script src="js/jquery-1.10.1.min.js"></script>
     <script src="js/LiftEffect.js"></script>
     <script src="js/index.js"></script>
-    <script>
+    <script type="module">
       $(document).ready(function () {
         const arr = [
           `lbq, starknet.site sponsor
@@ -288,15 +288,10 @@
         ];
         let str = arr
           .map((el, idx) => {
-            // return `<li>
-            //   <a href="https://www.ampleforth.org/" target="_blank"
-            //     ><img src="images/avartars/${idx+1}.jpeg" /><tt></tt
-            //   ></a>
-            // </li>`;
-            console.log(el.split(","));
-
             return ` <div class="card"><div class="photo">
-            <img src="images/avartars/${el.split(",")[0]}.jpeg">
+            <img src="/avartars/${
+              el.split(",")[0]
+            }.jpeg">
         </div>
         <h1>${el.split(",")[0]}</h1>
         <h2></h2>

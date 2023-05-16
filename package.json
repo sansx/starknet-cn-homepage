@@ -1,0 +1,21 @@
+{
+  "name": "starknet-cn",
+  "version": "1.0.0",
+  "repository": "https://github.com/sansx/starknet-cn-homepage.git",
+  "author": "sansx <646924078@qq.com>",
+  "source": "index.html",
+  "staticFiles": {
+    "staticPath": "static",
+    "watcherGlob": "**"
+  },
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.8.3",
+    "parcel": "^2.8.3",
+    "parcel-reporter-static-files-copy": "^1.5.0"
+  }
+}
