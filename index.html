@@ -12,6 +12,7 @@
   <meta name="keywords" content="" />
   <link rel="stylesheet" href="css/style.scss" />
 
+  <link rel="stylesheet" href="css/locomotive-scroll.min.css" />
 </head>
 
 <body>
@@ -20,84 +21,93 @@
       <span class="logo"><img src="images/new_logo.jpg" /></span>
 
       <div class="nav">
-        <a class="on">ABOUT</a>
-        <a>STARKER</a>
-        <a>FORUM</a>
-        <a>CONTACT</a>
+        <a href="#ABOUT" class="links" class="on" data-scroll-to>ABOUT</a>
+        <a href="#STARKER" class="links" data-scroll-to>STARKER</a>
+        <a href="#FORUM" class="links" data-scroll-to>FORUM</a>
+        <a href="#SHARE" class="links" data-scroll-to>CONTACT</a>
       </div>
     </div>
   </div>
- 
 
-  <div class="fbg-abg t1">
-    <div class="headerbox">
-      <div class="fbg-atit">
-        <span><em>starknet.site</em><tt></tt></span>
-      </div>
-      <div class="fbg-a">
-        <!-- <h2>
+  <div data-scroll-container>
+    <div class="nav submenu2" style="display: none">
+      <a href="#ABOUT" class="on" data-scroll-to>ABOUT</a>
+      <a href="#STARKER" data-scroll-to>STARKER</a>
+      <a href="#FORUM" data-scroll-to>FORUM</a>
+      <a href="#SHARE" data-scroll-to>CONTACT</a>
+    </div>
+
+    <div class="fbg-abg t1" id="ABOUT">
+      <div class="headerbox" data-scroll data-scroll-speed="1">
+        <div class="fbg-atit">
+          <span><em>starknet.site</em><tt></tt></span>
+        </div>
+        <div class="fbg-a">
+          <!-- <h2>
             
           </h2> -->
-        <p>
-          A non-profit organization based on starknet and the cario
-        </p>
-        <p>dedicated to making the cario and starknet popular</p>
-      </div>
-      <div class="fbg-but" data-id="1"><span></span></div>
-    </div>
-  </div>
-
-  <div class="fbg-cbg t2">
-    <div class="fbg-btit">STARKER</div>
-    <div class="fbg-c">
-      <div class="fbg-cm">
-        <ul class=""></ul>
+          <p>
+            A non-profit organization based on starknet and the cario
+          </p>
+          <p>dedicated to making the cario and starknet popular</p>
+        </div>
+        <a class="fbg-but" href="#STARKER" data-scroll-to><span></span></a>
       </div>
     </div>
-    <div class="fbg-but" data-id="2"><span></span></div>
-  </div>
 
-  <div class="fbg-bbg t3">
-    <div class="fbg-btit">FORUM</div>
-    <div class="fbg-a">
-      <a href="https://forum.starknet.site/" target="_blank">
-        <button class="button-64" role="button">
-          <span class="text">GO TO FORUM</span>
-        </button></a>
+    <div class="fbg-cbg t2" id="STARKER">
+      <div class="fbg-btit">STARKER</div>
+      <div class="fbg-c">
+        <div class="fbg-cm">
+          <ul class=""></ul>
+        </div>
+      </div>
+      <a href="#FORUM" class="fbg-but" data-scroll-to><span></span></a>
+    </div>
 
-      <!-- <h2>We are running market neutral</h2>
+    <div class="fbg-bbg t3" id="FORUM">
+      <div class="fbg-btit">FORUM</div>
+      <div class="fbg-a">
+        <a href="https://forum.starknet.site/" target="_blank">
+          <button class="button-64" role="button">
+            <span class="text">GO TO FORUM</span>
+          </button></a>
+
+        <!-- <h2>We are running market neutral</h2>
         <h2>quantitative trading strategies</h2>
         <h2>on all major crypto exchanges</h2> -->
+      </div>
+      <a class="fbg-but" href="#SHARE" data-scroll-to><span></span></a>
     </div>
-    <div class="fbg-but" data-id="3"><span></span></div>
-  </div>
 
-  <div class="fbg-dbg t4">
-    <div class="fbg-d">
-      <a href="https://forum.starknet.site/" target="_blank">
-        <button class="button-64 iconBtn" role="button">
-          <span class="text"><img class="btnIcon" src="images/Email-Icon.png" />ilove@starknet.site</span>
-        </button></a>
-      <a href="https://twitter.com/starknetsite" target="_blank">
-        <button class="button-64 iconBtn" role="button">
-          <span class="text"><img class="btnIcon" src="images/twitter-icon.png" />starknetsite</span>
-        </button></a>
-      <!-- <a href="mailto:media@fbg.capital"><span>media@fbg.capital</span></a> -->
+    <div class="fbg-dbg t4" id="SHARE">
+      <div class="fbg-d" data-scroll data-scroll-speed="2">
+        <a href="https://forum.starknet.site/" target="_blank">
+          <button class="button-64 iconBtn" role="button">
+            <span class="text"><img class="btnIcon" src="images/Email-Icon.png" />ilove@starknet.site</span>
+          </button></a>
+        <a href="https://twitter.com/starknetsite" target="_blank">
+          <button class="button-64 iconBtn" role="button">
+            <span class="text"><img class="btnIcon" src="images/twitter-icon.png" />starknetsite</span>
+          </button></a>
+        <!-- <a href="mailto:media@fbg.capital"><span>media@fbg.capital</span></a> -->
+      </div>
     </div>
-  </div>
 
-  <div class="fbg-ebg">
-    <div class="fbg-e">
-      <span class="pic"><img src="images/footerlogo.jpg" /></span>
-      <span class="text">Copyright C 2022-2023</span>
-      <!-- FBG
+    <div class="fbg-ebg">
+      <div class="fbg-e">
+        <span class="pic"><img src="images/footerlogo.jpg" /></span>
+        <span class="text">Copyright C 2022-2023</span>
+        <!-- FBG
         Offcial Website. All Rights Reserved -->
+      </div>
     </div>
   </div>
-
   <script src="js/jquery-1.10.1.min.js"></script>
-  <script src="js/LiftEffect.js"></script>
-  <script src="js/index.js"></script>
+  <!-- <script src="js/LiftEffect.js"></script>
+  <script src="js/index.js"></script> -->
+  <script src="js/locomotive-scroll.min.js"></script>
+
   <script type="module">
     $(document).ready(function () {
       const arr = [
@@ -118,20 +128,39 @@
       ];
       let str = arr
         .map((el, idx) => {
-          return ` <div class="card"><div class="photo">
+          return ` <li class="card"><div class="photo">
             <img src="/avartars/${el.split(",")[0]
             }.jpeg">
         </div>
         <h1>${el.split(",")[0]}</h1>
         <h2></h2>
         <p>${el}</p>
-        <a href="#">know more</a></div>`;
+        <a href="#">know more</a></li>`;
         })
         .join("");
       $("ul").html(str);
       // + `<div class="clear"></div>`
+
+
+      const lscroll = new LocomotiveScroll({
+        el: document.querySelector("[data-scroll-container]"),
+        smooth: true,
+        direction: "vertical",
+      });
+
+      const links1 = document.querySelectorAll(".links");
+      const links2 = document.querySelectorAll(".submenu2 a");
+      links1.forEach((link1, index) => {
+        // 给每个链接添加点击事件处理程序
+        link1.addEventListener("click", (event) => {
+          event.preventDefault(); // 阻止默认点击事件
+          this.isShowMenu = false;
+          links2[index].click(); // 触发相应的链接点击事件
+        });
+      });
     });
   </script>
+
 </body>
 
 </html>
